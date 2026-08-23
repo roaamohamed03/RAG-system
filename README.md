@@ -28,7 +28,7 @@ If you don't have Python installed yet, follow these steps:
 
 ## Getting Started
 
-### 1. **Clone the repository:**
+### 1. Clone the repository:
    ```bash
    git clone <your-repository-url>
    cd RAG-system
@@ -41,12 +41,27 @@ If you don't have Python installed yet, follow these steps:
 
     .\venv\Scripts\activate
     
-### 4. Install Dependencies
+### 4. Navigate to the source folder:
+
+    cd src
+
+### 5. Install Dependencies
     
     pip install -r requirements.txt
     
-### 5. Setup the environment variables
+### 6. Setup the environment variables
     
     Copy-Item .env.example .env
     
 Set your environment variables in the `.env` file. Like `OPENAI_API_KEY` value.
+
+### 7. Run the FASTAPI server 
+
+```bash
+uvicorn main:app --reload --host 0.0.0.0
+```
+Open your browser or API client (like Postman) and go to:
+
+Local URL: http://127.0.0.1:8000
+
+Interactive Docs (Swagger): http://127.0.0.1:8000/docs
