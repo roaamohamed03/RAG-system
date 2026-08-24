@@ -40,25 +40,21 @@ If you don't have Python installed yet, follow these steps:
 ### 3. Activate the Virtual Environment:
 
     .\venv\Scripts\activate
-    
-### 4. Navigate to the source folder:
 
-    cd src
-
-### 5. Install Dependencies
+### 4. Install Dependencies
     
     pip install -r requirements.txt
     
-### 6. Setup the environment variables
+### 5. Setup the environment variables
     
     Copy-Item .env.example .env
     
 Set your environment variables in the `.env` file. Like `OPENAI_API_KEY` value.
 
-### 7. Run the FASTAPI server 
+### 6. Run the FASTAPI server 
 
 ```bash
-uvicorn main:app --reload --host 0.0.0.0
+uvicorn src.main:app --reload --host 0.0.0.0
 ```
 Open your browser or API client (like Postman) and go to:
 
